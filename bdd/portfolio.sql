@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : ven. 27 mars 2026 à 14:16
+-- Généré le : ven. 15 mai 2026 à 10:53
 -- Version du serveur : 9.1.0
 -- Version de PHP : 8.3.14
 
@@ -57,6 +57,18 @@ CREATE TABLE IF NOT EXISTS `categories` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Déchargement des données de la table `categories`
+--
+
+INSERT INTO `categories` (`id`, `name`, `image`, `description`) VALUES
+(1, 'catégorie 1', NULL, NULL),
+(2, 'Catégorie 2', NULL, NULL),
+(3, 'Catégorie 32', NULL, NULL),
+(4, 'webdev1', NULL, NULL),
+(5, 'BI1', NULL, NULL),
+(6, 'test WebDev1', NULL, NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -72,6 +84,13 @@ CREATE TABLE IF NOT EXISTS `contact` (
   `message` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Déchargement des données de la table `contact`
+--
+
+INSERT INTO `contact` (`id`, `nom`, `email`, `date`, `message`) VALUES
+(1, 'berti Jordan', 'berti@myepse.be', '2025-12-11 10:34:48', 'hello');
 
 -- --------------------------------------------------------
 
@@ -104,6 +123,15 @@ CREATE TABLE IF NOT EXISTS `products` (
   `cover` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Déchargement des données de la table `products`
+--
+
+INSERT INTO `products` (`id`, `name`, `date`, `category`, `description`, `cover`) VALUES
+(1, 'Product 1000', '2025-10-07', 1, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc arcu felis, ultrices et nisl nec, iaculis malesuada elit. Morbi quis diam in dolor suscipit lacinia. Suspendisse enim arcu, bibendum a turpis id, pulvinar mattis ex. Phasellus efficitur auctor quam ac blandit. Integer ac ligula sed magna dignissim facilisis. Nulla gravida eu ex eu bibendum. Maecenas in rhoncus ipsum. In hac habitasse platea dictumst. Sed lorem purus, malesuada non viverra et, ultrices eget lorem. Phasellus at neque ut felis porta blandit sed ut tortor. Ut non nunc massa. Sed sapien elit, feugiat id euismod in, varius eget erat. ', 'image.jpg'),
+(2, 'Product 2', '2025-09-09', 2, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc arcu felis, ultrices et nisl nec, iaculis malesuada elit. Morbi quis diam in dolor suscipit lacinia. Suspendisse enim arcu, bibendum a turpis id, pulvinar mattis ex. Phasellus efficitur auctor quam ac blandit. Integer ac ligula sed magna dignissim facilisis. Nulla gravida eu ex eu bibendum. Maecenas in rhoncus ipsum. In hac habitasse platea dictumst. Sed lorem purus, malesuada non viverra et, ultrices eget lorem. Phasellus at neque ut felis porta blandit sed ut tortor. Ut non nunc massa. Sed sapien elit, feugiat id euismod in, varius eget erat. ', 'image.jpg'),
+(3, 'Product 3', '2025-07-08', 1, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc arcu felis, ultrices et nisl nec, iaculis malesuada elit. Morbi quis diam in dolor suscipit lacinia. Suspendisse enim arcu, bibendum a turpis id, pulvinar mattis ex. Phasellus efficitur auctor quam ac blandit. Integer ac ligula sed magna dignissim facilisis. Nulla gravida eu ex eu bibendum. Maecenas in rhoncus ipsum. In hac habitasse platea dictumst. Sed lorem purus, malesuada non viverra et, ultrices eget lorem. Phasellus at neque ut felis porta blandit sed ut tortor. Ut non nunc massa. Sed sapien elit, feugiat id euismod in, varius eget erat. ', 'image.jpg');
 
 -- --------------------------------------------------------
 

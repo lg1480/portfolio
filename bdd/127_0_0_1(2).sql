@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : ven. 27 mars 2026 à 14:16
+-- Généré le : ven. 15 mai 2026 à 10:53
 -- Version du serveur : 9.1.0
 -- Version de PHP : 8.3.14
 
@@ -131,14 +131,9 @@ CREATE TABLE IF NOT EXISTS `products` (
 --
 
 INSERT INTO `products` (`id`, `name`, `date`, `category`, `description`, `cover`) VALUES
-(1, 'Product 1', '2025-10-07', 1, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc arcu felis, ultrices et nisl nec, iaculis malesuada elit. Morbi quis diam in dolor suscipit lacinia. Suspendisse enim arcu, bibendum a turpis id, pulvinar mattis ex. Phasellus efficitur auctor quam ac blandit. Integer ac ligula sed magna dignissim facilisis. Nulla gravida eu ex eu bibendum. Maecenas in rhoncus ipsum. In hac habitasse platea dictumst. Sed lorem purus, malesuada non viverra et, ultrices eget lorem. Phasellus at neque ut felis porta blandit sed ut tortor. Ut non nunc massa. Sed sapien elit, feugiat id euismod in, varius eget erat. ', 'image.jpg'),
+(1, 'Product 1000', '2025-10-07', 1, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc arcu felis, ultrices et nisl nec, iaculis malesuada elit. Morbi quis diam in dolor suscipit lacinia. Suspendisse enim arcu, bibendum a turpis id, pulvinar mattis ex. Phasellus efficitur auctor quam ac blandit. Integer ac ligula sed magna dignissim facilisis. Nulla gravida eu ex eu bibendum. Maecenas in rhoncus ipsum. In hac habitasse platea dictumst. Sed lorem purus, malesuada non viverra et, ultrices eget lorem. Phasellus at neque ut felis porta blandit sed ut tortor. Ut non nunc massa. Sed sapien elit, feugiat id euismod in, varius eget erat. ', 'image.jpg'),
 (2, 'Product 2', '2025-09-09', 2, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc arcu felis, ultrices et nisl nec, iaculis malesuada elit. Morbi quis diam in dolor suscipit lacinia. Suspendisse enim arcu, bibendum a turpis id, pulvinar mattis ex. Phasellus efficitur auctor quam ac blandit. Integer ac ligula sed magna dignissim facilisis. Nulla gravida eu ex eu bibendum. Maecenas in rhoncus ipsum. In hac habitasse platea dictumst. Sed lorem purus, malesuada non viverra et, ultrices eget lorem. Phasellus at neque ut felis porta blandit sed ut tortor. Ut non nunc massa. Sed sapien elit, feugiat id euismod in, varius eget erat. ', 'image.jpg'),
-(3, 'Product 3', '2025-07-08', 1, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc arcu felis, ultrices et nisl nec, iaculis malesuada elit. Morbi quis diam in dolor suscipit lacinia. Suspendisse enim arcu, bibendum a turpis id, pulvinar mattis ex. Phasellus efficitur auctor quam ac blandit. Integer ac ligula sed magna dignissim facilisis. Nulla gravida eu ex eu bibendum. Maecenas in rhoncus ipsum. In hac habitasse platea dictumst. Sed lorem purus, malesuada non viverra et, ultrices eget lorem. Phasellus at neque ut felis porta blandit sed ut tortor. Ut non nunc massa. Sed sapien elit, feugiat id euismod in, varius eget erat. ', 'image.jpg'),
-(4, 'Produit test', '2025-11-14', 3, 'test', 'https://media.istockphoto.com/id/814423752/fr/photo/oeil-du-mod%C3%A8le-avec-le-maquillage-art-color%C3%A9-gros-plan.jpg?s=612x612&amp;w=0&amp;k=20&amp;c=NeNYcLTUsVfcAyGmFHM7BWpwnFFXvCxsGfSwyZOB8nU='),
-(5, 'produit test 2', '2025-11-14', 2, 'test', '691727095e31f-Couv-272116.jpg'),
-(6, 'test', '2025-11-14', 2, 'test', '691728d6ea6db-Daredevil-12.jpg'),
-(10, 'test', '2026-01-07', 4, 'test', '695b7222e8f25-logo.jpg'),
-(11, 'test BI1', '2026-01-06', 5, 'test', '695bcd597716f-wallpaper.jpg');
+(3, 'Product 3', '2025-07-08', 1, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc arcu felis, ultrices et nisl nec, iaculis malesuada elit. Morbi quis diam in dolor suscipit lacinia. Suspendisse enim arcu, bibendum a turpis id, pulvinar mattis ex. Phasellus efficitur auctor quam ac blandit. Integer ac ligula sed magna dignissim facilisis. Nulla gravida eu ex eu bibendum. Maecenas in rhoncus ipsum. In hac habitasse platea dictumst. Sed lorem purus, malesuada non viverra et, ultrices eget lorem. Phasellus at neque ut felis porta blandit sed ut tortor. Ut non nunc massa. Sed sapien elit, feugiat id euismod in, varius eget erat. ', 'image.jpg');
 
 -- --------------------------------------------------------
 
