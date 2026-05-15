@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="assets/bootstrap-5.3.8-dist/css/bootstrap.min.css">
     <script src="assets/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="assets/style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="build/style.css">
+    <title>Louis Geiregat</title>
 </head>
 <body>
 
@@ -18,7 +18,11 @@
         include("partials/nav.php");
     ?>
 </div>
-<div class="container">
+<div class="slide" id="aboutme">
+    <img src="images/rectangle about me.png" id="rectangleaboutme">
+</div>
+<div class="slide" id="skills">
+    <div class="container">
     <div class="row">
         <?php
         require "config/connexion.php";
@@ -44,6 +48,8 @@
         <a href="categories.php" class="btn btn-primary">Voir plus</a>
     </div>
 </div>
+</div>
+
 <div class="slide" id="contact">
     <div class="gauche"></div>
     <div class="droite">
