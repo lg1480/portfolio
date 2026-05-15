@@ -9,17 +9,19 @@
     <script src="assets/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="build/style.css">
+    <link href="https://fonts.cdnfonts.com/css/lemonmilk" rel="stylesheet">
     <title>Louis Geiregat</title>
 </head>
 <body>
 
 <div class="slide" id="accueil">
+    <img src="images/Group 6.png" alt="gif pas gif">
     <?php
         include("partials/nav.php");
     ?>
 </div>
 <div class="slide" id="aboutme">
-    <img src="images/rectangle about me.png" id="rectangleaboutme">
+    <img src="images/Group 7.png" id="rectangleaboutme">
 </div>
 <div class="slide" id="skills">
     <div class="container">

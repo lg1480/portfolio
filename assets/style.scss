@@ -21,9 +21,22 @@
 .slide{
     width: 100%;
     min-height: 100vh;
+    background-color: #F1E4D1;
 }
 #accueil{
-    background-image: url("../images/Rectangle1.png");
+    background-image: url("../images/rectangleaccueil.png");
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#aboutme{
+    display: flex;
+}
+#rectangleaboutme{
+    width: 100vw;
+    max-height: 55vh;
+    margin-top: 40vh;
 }
 #contact{
     display: flex;
