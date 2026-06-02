@@ -14,78 +14,182 @@
 </head>
 <body>
 
-<div class="slide" id="accueil">
-    <img src="images/Group 6.png" alt="gif pas gif">
-    <?php
-        include("partials/nav.php");
-    ?>
-</div>
-<div class="slide" id="aboutme">
-    <img src="images/Group 7.png" id="rectangleaboutme">
-</div>
-<div class="slide" id="skills">
-    <div class="container">
-    <div class="row">
+    <div class="slideaccueil" id="accueil">
+        <div class="bg"></div>
+        <img src="images/animation.webp" id="gif">
         <?php
-        require "config/connexion.php";
-        $req = $bdd->query("SELECT products.cover AS cover, products.name AS pname, categories.name AS cname, DATE_FORMAT(products.date, '%d/%m/%Y') AS mydate, products.id AS pid, categories.id AS cid FROM products INNER JOIN categories ON products.category = categories.id ORDER BY products.date DESC LIMIT 0,4");
-        while($don = $req->fetch())
-        {
-            echo '<div class="col-lg-3 col-md-4 col-sm-6">';
-                echo '<div class="card my-3">';
-                    echo '<img src="images/mini_'.$don['cover'].'" class="card-img-top" alt="image de '.$don['pname'].'">';
-                    echo ' <div class="card-body">';
-                        echo '<h5 class="card-title">'.$don['pname'].'</h5>';
-                        echo '<a href="category.php?id='.$don['cid'].'" class="btn btn-secondary">'.$don['cname'].'</a>';
-                        echo ' <p class="card-text"><strong>Date: </strong>'.$don['mydate'].'</p>';
-                        echo ' <a href="product.php?id='.$don['pid'].'" class="btn btn-primary">En savoir plus</a>';
-                    echo '</div>';
-                echo '</div>';
-            echo '</div>';
-        }
-        $req->closeCursor();
+            include("partials/nav.php");
         ?>
     </div>
-    <div class="d-flex justify-content-center my-5">
-        <a href="categories.php" class="btn btn-primary">Voir plus</a>
+    <div class="slideaboutme" id="aboutme">
+        <div class="containerdescontainers">
+            <div class="container">
+            <div class="rectangle1"><p>Hello ! My name is <strong>Louis</strong> , welcome to my portfolio :) <br>I was born in <strong>Belgium</strong> on October 2nd, 2003, and I live in Enghien. I’m a computer graphics student at the <strong>EPSE</strong>, currently in the second year of a three-year program. You can check out my work in the “<strong>Projects</strong>” section  below.</p> </div>
+            <div class="rectangle2">
+                <div class="icone">
+                    <div class="iconepng">
+                        <img src="images/carte-didentite.png">
+                    </div>
+                    <p>Louis Geiregat</p>
+                </div>
+                <div class="icone">
+                    <div class="iconepng">
+                        <img src="images/cartes-et-emplacements">
+                    </div>
+                    <p>Enghien - Belgium</p>
+                </div>
+                <div class="icone">
+                    <div class="iconepng">
+                        <img src="images/study.png">
+                    </div>
+                    <p>Computer Graphics - EPSE</p>
+                </div>
+            </div>
+            <div class="rectangle2">
+                <div class="icone">
+                    <div class="iconepng">
+                        <img src="images/guitare.png">
+                    </div>
+                    <p>Music</p>
+                </div>
+                <div class="icone">
+                    <div class="iconepng">
+                        <img src="images/avion.png">
+                    </div>
+                    <p>Travel</p>
+                </div>
+                <div class="icone">
+                    <div class="iconepng">
+                        <img src="images/basketball.png">
+                    </div>
+                    <p>basketball</p>
+                </div>
+            </div>
+            <div class="rectangle1"><p>Ever since I was young, I’ve always felt the need to create. I started <strong>drawing</strong> and playing <strong>music</strong> at an early age, and both are still an important part of my life today. I also love <strong>traveling</strong>, discovering new places and cultures, staying active through <strong>sports</strong>, and I’m a huge <strong>basketball</strong> fan.</p></div>
+            </div>
+            <div class="container">
+                <div class="rectangleinvisible"></div>
+                <div class="rectangletel">+32 484 56 87 37 - louis.geiregat@hotmail.be</div>
+                
+            </div>
+        </div>
+        
+    
     </div>
-</div>
-</div>
-
-<div class="slide" id="contact">
-    <div class="gauche"></div>
-    <div class="droite">
-        <h3>Contact</h3>
-        <?php
-            if(isset($_GET['success']))
-            {
-                echo "<div class='message-success'>Votre message à bien été envoyé! Merci</div>";
-            }
-
-            if(isset($_GET['error']))
-            {
-                echo "<div class='message-error'>Une erreur est survenue</div>";
-            }
-
-        ?>
-        <form action="treatmentContact.php" method="POST">
-            <div class="form-group">
-                <label for="nom">Nom: </label>
-                <input type="text" name="nom" id="nom">
+    <div class="slideprojects" id="projects">
+        <div class="containerdescontainersprojects">
+            <div class="containerprojects">
+                <p id="allofmywork">ALL OF MY WORK</p>
+                <a href="categories.php" class="btn" id="illuprojects">Click here</a>
             </div>
-            <div class="form-group">
-                <label for="email">E-mail: </label>
-                <input type="email" name="email" id="email">
+            <div class="containerprojects">
+                <div class="rectlatest">
+                    <p id="latest">LATEST PROJECTS</p>
+                </div>
+                <div class="galerie">
+                        <div class="item"></div>
+                        <div class="item"></div>
+                        <div class="item"></div>
+                        <div class="item"></div>
+                        <div class="item"></div>
+                    </div>
             </div>
-            <div class="form-group">
-                <label for="message">Message: </label>
-                <textarea name="message" id="message"></textarea>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Envoyer">
-            </div>
-        </form>
+        </div>
+        
+            
     </div>
-</div>
+    </div>
+
+    <div class="slidecontact" id="contact">
+        <div class="containerdescontainerscontact">
+            <div class="containercontact">
+                <div class="containercontact1">
+                    <h1>Want to work together?</h1>
+                    <h3>Fill this form,
+                        any idea is welcome.
+                    </h3>
+                    <p>You can also find my phone number and email-adress in the <strong>ABOUT ME</strong> section and in the <strong>footer</strong>. </p>
+                </div>
+                <div class="containercontact2">
+                    <?php
+                    if(isset($_GET['success']))
+                    {
+                        echo "<div class='message-success'>Votre message à bien été envoyé! Merci</div>";
+                    }
+
+                    if(isset($_GET['error']))
+                    {
+                        echo "<div class='message-error'>Une erreur est survenue</div>";
+                    }
+
+                    ?>
+                    <form action="treatmentContact.php" method="POST">
+                        <div class="containernameemail">
+                            <div class="form-group">
+                                <label for="nom" id="contacttitle">NAME. </label>
+                                <input type="text" name="nom" id="nom">
+                            </div>
+                            <div class="form-group">
+                                <label for="email" id="contacttitle">E-MAIL. </label>
+                                <input type="email" name="email" id="email">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" id="contacttitle">MESSAGE. </label>
+                            <textarea name="message" id="message"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="SEND">
+                        </div>
+                    </form>
+                </div>
+            </div>    
+        </div>
+        <footer class="footer">
+            <div class="footer-container">
+
+                <!-- Colonne gauche -->
+                <div class="footer-column">
+                    <a href="#accueil" class="footer-icon">
+                        <img src="images/logo finale blanc" alt="Logo">
+                    </a>
+
+                    <a href="#aboutme" class="footer-link">
+                        ABOUT ME
+                    </a>
+                </div>
+
+                <!-- Colonne centre -->
+                <div class="footer-column footer-center">
+
+                    <p class="copyright">
+                        © LOUIS GEIREGAT – all rights reserved
+                    </p>
+
+                    <div class="contact-info">
+                        <p>ENGHIEN, BELGIUM</p>
+                        <p>LOUIS.GEIREGAT@HOTMAIL.BE</p>
+                        <p>+32 484 56 87 37</p>
+                    </div>
+
+                    <a href="#projects" class="footer-link">
+                        PROJECTS
+                    </a>
+
+                </div>
+
+                <!-- Colonne droite -->
+                <div class="footer-column">
+                    <a href="https://www.instagram.com/louisgeiregat/" target="_blank" class="footer-icon">
+                        <img src="images/instagram.png" alt="Instagram">
+                    </a>
+
+                    <a href="#contact" class="footer-link">
+                        GET IN TOUCH !
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
 </body>
 </html>
