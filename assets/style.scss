@@ -163,18 +163,18 @@ $noir: #000000;
     }
 }
 .rectangle1{
-    animation: appear linear;
+    animation: appear ease-in-out;
     animation-timeline: view();
-    animation-range: entry 0% cover 25%;
+    animation-range: entry 0% cover 40%;
 }
 .rectangle2{
-    animation: appear linear;
+    animation: appear ease-in-out;
     animation-timeline: view();
-    animation-range: entry 0% cover 25%;
+    animation-range: entry 0% cover 40%;
 }
 
 .rectangletel{
-    animation: appearright linear;
+    animation: appearright ease-in-out;
     animation-timeline: view();
     animation-range: entry 0% cover 20%;
 }
@@ -272,7 +272,6 @@ $noir: #000000;
     width: 1170px;
     height: 250px;
     border-radius: 30px;
-    opacity: 50%;
     background-image: url("../images/projectsbutton1.png");
     background-size: cover;
     background-position: center center;
@@ -287,8 +286,12 @@ $noir: #000000;
     font-size: 150px;
     transition:
     transform 0.5s ease,
+    opacity 0.5s ease,
     box-shadow 0.5s ease;
     transform-origin: center;
+    text-shadow:
+    0 0 10px rgb(0, 0, 0),
+    0 0 20px rgb(255, 255, 255);
 }
 @media screen and (max-width: 980px){
     #illuprojects{
@@ -351,6 +354,14 @@ $noir: #000000;
         transform: translateY(0px);
     }
 }
+@keyframes appearprojects1 {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
 @keyframes appearprojects2 {
     from {
         opacity: 0;
@@ -363,24 +374,24 @@ $noir: #000000;
 }
 
 #illuprojects{
-    animation: appearprojects linear;
+    animation: appearprojects1 linear;
     animation-timeline: view();
-    animation-range: entry 0% cover 25%;
+    animation-range: entry 0% cover 80%;
 }
 #allofmywork{
-    animation: appearprojects2 linear;
+    animation: appearprojects2 ease-in-out;
     animation-timeline: view();
-    animation-range: entry 0% cover 25%;
+    animation-range: entry 0% cover 40%;
 }
 #latest{
-    animation: appearprojects2 linear;
+    animation: appearprojects2 ease-in-out;
     animation-timeline: view();
-    animation-range: entry 0% cover 25%;
+    animation-range: entry 0% cover 40%;
 }
 .galerie{
-    animation: appearprojects linear;
+    animation: appearprojects ease-in-out;
     animation-timeline: view();
-    animation-range: entry 0% cover 25%;
+    animation-range: entry 0% cover 35%;
 }
 .slidecontact{
     display: flex;

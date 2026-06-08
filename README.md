@@ -19,4 +19,4 @@ ce système. Pour plus d’informations, consultez about_Execution_Policies à l
 
 ## pour démarrer sass 
 
-```sass ./assets/style.scss ./build/style.css --style=compressed --watch```
+'''sass C:\Users\louis\Documents\PHP\portfolio\assets\style.scss C:\Users\louis\Documents\PHP\portfolio\build\style.css --style=compressed --watch'''

@@ -57,7 +57,7 @@ include("partials/nav.php");
                     ?>               
                     <div class="form-group my-3">
                         <label for="fichier">Image</label>
-                        <input type="hidden" name="MAX_FILE_SIZE" value="1000000">
+                        <input type="hidden" name="MAX_FILE_SIZE" value="5000000">
                         <input type="file" id="fichier" name="fichier" class="form-control">
                     </div>
                     <div class="form-group">

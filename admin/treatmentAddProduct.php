@@ -124,7 +124,7 @@ var_dump($size);*/
 
                 // vérification de la taille de l'image (en kilooctets)
                 // taille max 1Mo
-                $tailleMax = 1000000;
+                $tailleMax = 5000000;
                 if($size > $tailleMax)
                 {
                     $errImg = 7;

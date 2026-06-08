@@ -38,7 +38,22 @@ if(!$don)
 
 //var_dump($don['name'])
 
-
+if(isset($_GET['deleteImg']) && is_numeric($_GET['deleteImg'])) {
+    $imgId = htmlspecialchars($_GET['deleteImg']);
+    // Récupérer le nom du fichier avant suppression
+    $reqImg = $bdd->prepare("SELECT * FROM images WHERE id=? AND id_product=?");
+    $reqImg->execute([$imgId, $id]);
+    $donImg = $reqImg->fetch();
+    if($donImg) {
+        // Supprimer le fichier physique
+        unlink("../images/" . $donImg['fichier']);
+        // Supprimer de la BDD
+        $delImg = $bdd->prepare("DELETE FROM images WHERE id=?");
+        $delImg->execute([$imgId]);
+    }
+    header("LOCATION:updateProduct.php?id=" . $id);
+    exit();
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -92,7 +107,7 @@ include("partials/nav.php");
                         <div class="col-md-4 my-3">
                             <img src="../images/<?= $don['cover'] ?>" alt="image de couverture" class="img-fluid">
                         </div>
-                        <input type="hidden" name="MAX_FILE_SIZE" value="1000000">
+                        <input type="hidden" name="MAX_FILE_SIZE" value="5000000">
                         <input type="file" id="cover" name="cover" class="form-control">
                     </div>
                     <div class="form-group my-3">
@@ -139,7 +154,7 @@ include("partials/nav.php");
                                 echo "<tr>";
                                     echo "<td>".$donGal['id']."</td>";
                                     echo "<td><img src='../images/".$donGal['fichier']."' alt='image de ".$don['name']."' class='img-fluid col-3'></td>";
-                                    echo "<td><a href='#' class='btn btn-danger'>Supprimer</a></td>";
+                                    echo "<td><a href='updateProduct.php?id=".$id."&deleteImg=".$donGal['id']."' class='btn btn-danger' onclick=\"return confirm('Supprimer cette image ?')\">Supprimer</a></td>";
                                 echo "</tr>";
                             }
                             $galery->closeCursor();

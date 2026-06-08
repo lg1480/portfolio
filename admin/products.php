@@ -153,6 +153,7 @@
                     $products->bindParam(":limit",$limit, PDO::PARAM_INT);
                     $products->execute();
                     while($donProd = $products->fetch())
+                    
                     {
                         echo '<tr class="text-center">';
                             echo '<td>'.$donProd['id'].'</td>';

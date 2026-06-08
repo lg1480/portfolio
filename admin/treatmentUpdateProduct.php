@@ -101,7 +101,7 @@ if(isset($_POST['nom']))
             }
 
             // vérification de la taille de l'image (en kilooctets)
-            $tailleMax = 1000000;
+            $tailleMax = 5000000;
             if($size > $tailleMax)
             {
                 $errImg = 7;
