@@ -57,6 +57,10 @@
                     <input type="file" id="cover" name="cover" class="form-control">
                 </div>
                 <div class="form-group my-3">
+                    <label for="video_url">Lien vidéo YouTube (optionnel)</label>
+                    <input type="text" id="video_url" name="video_url" class="form-control" placeholder="https://www.youtube.com/embed/XXXXX">
+                </div>
+                <div class="form-group my-3">
                     <label for="categorie">Catégorie</label>
                     <select name="categorie" id="categorie" class="form-control">
                        <?php

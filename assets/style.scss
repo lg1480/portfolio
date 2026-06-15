@@ -2,6 +2,7 @@ $bleufonce: #262C43;
 $fond: #EEE6DA;
 $blanc: #FFFFFF;
 $noir: #000000;
+$orange:#ffa600;
 @import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
 @import url('https://fonts.cdnfonts.com/css/lemonmilk');
 *{
@@ -28,7 +29,7 @@ $noir: #000000;
     position: relative;
     width: 100%;
     min-height: 100vh;
-    background-color: #EEE6DA;
+    background-color: $fond;
     overflow: visible;
 }
 #accueil{
@@ -231,7 +232,6 @@ $noir: #000000;
     min-height: 100vh;
     height: fit-content;
     background-color: #EEE6DA;
-    background-image: url("../images/espace.png");
     background-size: 85vh;
     background-repeat: no-repeat;
     background-position: center center;
@@ -331,10 +331,24 @@ $noir: #000000;
 .item {
     flex: 1;
     border-radius: 15px;
-    transition: flex 0.4s ease;
+    transition: flex .4s ease;
     cursor: pointer;
     background-color: #262c43;
-    opacity: 50%;
+    overflow: hidden; /* ← empêche l'image de déborder */
+}
+
+.item a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* ← remplit le rectangle en recadrant */
+    object-position: center;
+    display: block;
 }
 
 /* Agrandissement au survol */
@@ -348,7 +362,7 @@ $noir: #000000;
 
 @keyframes appearprojects {
     from {
-        transform: translateY(200px);
+        transform: translateY(300px);
     }
     to {
         transform: translateY(0px);
@@ -376,7 +390,7 @@ $noir: #000000;
 #illuprojects{
     animation: appearprojects1 linear;
     animation-timeline: view();
-    animation-range: entry 0% cover 80%;
+    animation-range: entry 0% cover 50%;
 }
 #allofmywork{
     animation: appearprojects2 ease-in-out;
@@ -391,7 +405,7 @@ $noir: #000000;
 .galerie{
     animation: appearprojects ease-in-out;
     animation-timeline: view();
-    animation-range: entry 0% cover 35%;
+    animation-range: entry 0% cover 20%;
 }
 .slidecontact{
     display: flex;

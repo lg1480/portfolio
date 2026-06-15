@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="build/style.css">
     <link href="https://fonts.cdnfonts.com/css/lemonmilk" rel="stylesheet">
     <title>Louis Geiregat</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 </head>
 <body>
 
@@ -87,12 +88,22 @@
                     <p id="latest">LATEST PROJECTS</p>
                 </div>
                 <div class="galerie">
-                        <div class="item"></div>
-                        <div class="item"></div>
-                        <div class="item"></div>
-                        <div class="item"></div>
-                        <div class="item"></div>
-                    </div>
+                    <?php
+                        include("config/connexion.php");
+                        $stmt = $bdd->query("SELECT * FROM products ORDER BY date DESC LIMIT 5");
+                        $projects = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+                        foreach ($projects as $project) : ?>
+                            <div class="item">
+                                <a href="product.php?id=<?= $project['id'] ?>">
+                                    <img src="images/<?= htmlspecialchars($project['cover']) ?>" alt="<?= htmlspecialchars($project['name']) ?>">
+                                    <div class="item-overlay">
+                                        <p><?= htmlspecialchars($project['name']) ?></p>
+                                    </div>
+                                </a>
+                            </div>
+                        <?php endforeach; ?>
+                </div>
             </div>
         </div>
         

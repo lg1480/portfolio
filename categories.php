@@ -29,13 +29,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="build/style.css">
     <title>Louis Geiregat</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
         @import url('https://fonts.cdnfonts.com/css/lemonmilk');
         body {
             background-color: #EEE6DA; /* fond sombre — change la couleur selon ton design */
             min-height: 100vh;
-            
+            overflow-y: scroll;
         }
         .btn-category {
             border: 1px solid #262C43;
@@ -73,7 +74,7 @@
         }
 
         .back-btn:hover{
-            background-color: #ff5e00;
+            background-color: #ffa600;
         }
         .container{
             display: flex;

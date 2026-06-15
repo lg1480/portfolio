@@ -68,6 +68,7 @@ if(isset($_POST['nom']))
     }else{
         $categorie = htmlspecialchars($_POST['categorie']);
     }
+    $video_url = !empty($_POST['video_url']) ? htmlspecialchars($_POST['video_url']) : null;
 
     if($err == 0)
     {
@@ -124,14 +125,15 @@ if(isset($_POST['nom']))
                     /**
                      * @var $bdd PDO
                      */
-                    $update = $bdd->prepare("UPDATE products SET name=:nom, date=:date, category=:category, description=:descri, cover=:img WHERE id = :myid");
+                    $update = $bdd->prepare("UPDATE products SET name=:nom, date=:date, category=:category, description=:descri, cover=:img, video_url=:video_url WHERE id = :myid");
                     $update->execute([
                         ":nom" => $nom,
                         ":date"=>$date,
                         ":category"=>$categorie,
                         ":descri"=>$description,
                         ":img"=>$uniqnomSsafe,
-                        ":myid"=>$id
+                        ":myid"=>$id,
+                        ":video_url" => $video_url
                     ]);
                        if($extension == ".jpg")
                        {
@@ -157,13 +159,14 @@ if(isset($_POST['nom']))
         }elseif($_FILES['cover']['error'] == 4) // tu n'as pas envoyé d'image
         {
           // update sans image
-            $update = $bdd->prepare("UPDATE products SET name=:nom, date=:date, category=:category, description=:descri WHERE id = :myid");
+            $update = $bdd->prepare("UPDATE products SET name=:nom, date=:date, category=:category, description=:descri, video_url=:video_url WHERE id = :myid");
             $update->execute([
                 ":nom" => $nom,
                 ":date"=>$date,
                 ":category"=>$categorie,
                 ":descri"=>$description,
-                ":myid"=>$id
+                ":myid"=>$id,
+                ":video_url" => $video_url
             ]);
             header("LOCATION:products.php?update=".$id);
             exit();

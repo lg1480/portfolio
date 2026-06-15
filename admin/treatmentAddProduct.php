@@ -72,6 +72,7 @@ var_dump($size);*/
         }else{
             $categorie = htmlspecialchars($_POST['categorie']);
         }
+        $video_url = !empty($_POST['video_url']) ? htmlspecialchars($_POST['video_url']) : null;
 
         // pour l'upload de l'image c'est plus la même chose que pour le nom, plus du $_POST mais du $_FILES
         /*if(empty($_POST['cover']))
@@ -161,13 +162,14 @@ var_dump($size);*/
                         /**
                          * @var $bdd PDO
                          */
-                        $insert = $bdd->prepare("INSERT INTO products(name,date,category,description,cover) VALUE(:nom,:date,:category,:descri,:cover)");
+                        $insert = $bdd->prepare("INSERT INTO products(name,date,category,description,cover,video_url) VALUE(:nom,:date,:category,:descri,:cover,:video_url)");
                         $insert->execute([
                             ":nom" => $nom,
                             ":date"=>$date,
                             ":category"=>$categorie,
                             ":descri"=>$description,
-                            ":cover"=>$uniqnomSsafe
+                            ":cover"=>$uniqnomSsafe,
+                            ":video_url" => $video_url
                         ]);
                        if($extension == ".jpg")
                        {

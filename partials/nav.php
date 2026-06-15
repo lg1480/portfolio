@@ -28,7 +28,7 @@ nav {
     transition: 0.3s ease;
 }
 .nav-linkcontact:hover{
-    background-color: #EEE6DA;
+    background-color: #ffa600;
     color: #262C43 !important;
 }
 .nav-linkaboutmeprojects,
