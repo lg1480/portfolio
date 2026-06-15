@@ -169,7 +169,7 @@ $orange:#ffa600;
     }
 }
 .rectangle1{
-    animation: appear ease-in-out;
+    animation: appear 1s ease-in-out;
     animation-timeline: view();
     animation-range: entry 0% cover 40%;
 }
@@ -604,7 +604,17 @@ $orange:#ffa600;
     animation-range: entry 0% cover 25%;
 }
 
-.containercontact1 h1, .containercontact1 h3, .containercontact1 p{
+.containercontact1 h2{
+    animation: appearprojects2 linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 25%;
+}
+.containercontact1 h4{
+    animation: appearprojects2 linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 25%;
+}
+.containercontact1 p{
     animation: appearprojects2 linear;
     animation-timeline: view();
     animation-range: entry 0% cover 25%;
