@@ -55,7 +55,7 @@
             color: #262C43;
         }
 
-        .btn-see-more:hover {
+        .card:hover .btn-see-more {
             background-color: #ffa600;
         }
         .back-btn{
@@ -81,6 +81,11 @@
             flex-direction: column;
             width: 95vw;
             overflow: hidden;
+        }
+        @media screen and (max-width: 768px){
+            .container-d-flex{
+                margin-top: 8vh;
+            }
         }
         .container-d-flex{
             height: 300px;

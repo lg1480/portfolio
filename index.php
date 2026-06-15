@@ -29,13 +29,13 @@
             <div class="rectangle2">
                 <div class="icone">
                     <div class="iconepng">
-                        <img src="images/carte-didentite.png">
+                        <img src="images/cartedidentite.png">
                     </div>
                     <p>Louis Geiregat</p>
                 </div>
                 <div class="icone">
                     <div class="iconepng">
-                        <img src="images/cartes-et-emplacements">
+                        <img src="images/cartesetemplacements.png">
                     </div>
                     <p>Enghien - Belgium</p>
                 </div>
@@ -115,10 +115,10 @@
         <div class="containerdescontainerscontact">
             <div class="containercontact">
                 <div class="containercontact1">
-                    <h1>Want to work together?</h1>
-                    <h3>Fill this form,
+                    <h2>Want to work together?</h2>
+                    <h4>Fill this form,
                         any idea is welcome.
-                    </h3>
+                    </h4>
                     <p>You can also find my phone number and email-adress in the <strong>ABOUT ME</strong> section and in the <strong>footer</strong>. </p>
                 </div>
                 <div class="containercontact2">
@@ -162,7 +162,7 @@
                 <!-- Colonne gauche -->
                 <div class="footer-column">
                     <a href="#accueil" class="footer-icon">
-                        <img src="images/logo finale blanc" alt="Logo">
+                        <img src="images/logofinaleblanc.png" alt="Logo">
                     </a>
 
                     <a href="#aboutme" class="footer-link">
