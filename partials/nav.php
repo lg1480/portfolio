@@ -152,7 +152,7 @@ nav {
 
 <nav class="navbar navbar-expand-lg fixed-top" data-bs-theme="light">
     <div class="container-fluid">
-        <a class="navbar-link" href="#accueil"><img src="images/logo finale noir 1.png" alt="logo" width="85" style="position: fixed; margin-left:1rem"></a>
+        <a class="navbar-link" href="#accueil"><img src="images/logofinalenoir1.png" alt="logo" width="85" style="position: fixed; margin-left:1rem"></a>
         <button class="navbar-toggler d-none" type="button">
             <span class="navbar-toggler-icon"></span>
         </button>

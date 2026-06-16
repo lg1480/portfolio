@@ -18,7 +18,7 @@
     <meta name="application-name" content="Louis Geiregat">
     <meta property="og:title" content="Louis Geiregat's professional portfolio">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="../images/logo finale noir.png">
+    <meta property="og:image" content="https://louisgeiregat.be/images/logofinalenoir1.png">
     <meta property="og:image:width" content="111">
     <meta property="og:image:height" content="111">
     <meta property="og:url" content="https://www.louisgeiregat.be/">
