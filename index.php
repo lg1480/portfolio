@@ -11,6 +11,20 @@
     <link rel="stylesheet" href="build/style.css">
     <link href="https://fonts.cdnfonts.com/css/lemonmilk" rel="stylesheet">
     <title>Louis Geiregat</title>
+    <meta
+      name="description"
+      content="Louis Geiregat Portfolio"
+    >
+    <meta name="application-name" content="Louis Geiregat">
+    <meta property="og:title" content="Louis Geiregat's professional portfolio">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="../images/logo finale noir.png">
+    <meta property="og:image:width" content="111">
+    <meta property="og:image:height" content="111">
+    <meta property="og:url" content="https://www.louisgeiregat.be/">
+    <meta property="og:description" content="Welcome to my portfolio. I invite you to explore my work and discover the projects that have shaped my creative journey."> 
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:site_name" content="Louis Geiregat">
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 </head>
 <body>
