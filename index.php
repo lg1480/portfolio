@@ -211,6 +211,9 @@
                         <p>ENGHIEN, BELGIUM</p>
                         <p>LOUIS.GEIREGAT@HOTMAIL.BE</p>
                         <p>+32 484 56 87 37</p>
+                        <a href="legal-notice.php" class="footer-link" id="legal-link">
+                            LEGAL NOTICE
+                        </a>
                     </div>
 
                     <a href="#projects" class="footer-link">
