@@ -83,7 +83,23 @@
             <div class="rectangle1"><p>Ever since I was young, I’ve always felt the need to create. I started <strong>drawing</strong> and playing <strong>music</strong> at an early age, and both are still an important part of my life today. I also love <strong>traveling</strong>, discovering new places and cultures, staying active through <strong>sports</strong>, and I’m a huge <strong>basketball</strong> fan.</p></div>
             </div>
             <div class="container">
-                <div class="rectangleinvisible"></div>
+                <div class="rectangleinvisible">
+                    <div id="skills">
+                        <div id="skillsrect">
+                            <?php
+                            include("config/connexion.php");
+                                $skills = $bdd->query('SELECT * FROM skills');
+                                while ($skill = $skills->fetch(PDO::FETCH_ASSOC)) {
+                                    echo "<div class='skills'>";
+                                        echo "<img src='images/".$skill['image']."' alt='logo ".$skill['nom']."'>";
+                                    echo "</div>";
+                                }
+                                $skills->closeCursor();
+                            ?>
+                        </div>
+                        
+                    </div>
+                </div>
                 <div class="rectangletel">+32 484 56 87 37 - louis.geiregat@hotmail.be</div>
                 
             </div>
